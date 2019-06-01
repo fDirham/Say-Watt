@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad4960a4-b363-469e-b028-a2cb5d28a856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OnAndOff.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StatusBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/off.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/on.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LSOnAndOff.js" afterDir="false" />
+    <list default="true" id="ad4960a4-b363-469e-b028-a2cb5d28a856" name="Default Changelist" comment="bro so basically were done">
+      <change afterPath="$PROJECT_DIR$/SaveFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
@@ -30,11 +25,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="128" column="89" selection-start-line="128" selection-start-column="89" selection-end-line="128" selection-end-column="89" />
+            <state relative-caret-position="-444">
+              <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#264#324#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,11 +37,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OnAndOff.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="114" column="5" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="1921">
+              <caret line="114" column="5" selection-start-line="61" selection-start-column="8" selection-end-line="114" selection-end-column="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -68,6 +71,7 @@
       <find>on</find>
       <find>coff</find>
       <find>value</find>
+      <find>Already_off</find>
       <find>console.log</find>
     </findStrings>
     <replaceStrings>
@@ -93,11 +97,12 @@
         <option value="$PROJECT_DIR$/assets/images/index.js" />
         <option value="$PROJECT_DIR$/OnAndOff.js" />
         <option value="$PROJECT_DIR$/StatusBar.js" />
+        <option value="$PROJECT_DIR$/SaveFile.txt" />
         <option value="$PROJECT_DIR$/App.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -113,17 +118,6 @@
             <path>
               <item name="tab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tab2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tab2" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tab2" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,12 +168,21 @@
       <option name="presentableId" value="Default" />
       <updated>1559111390367</updated>
       <workItem from="1559111391495" duration="5399000" />
-      <workItem from="1559191805735" duration="37199000" />
+      <workItem from="1559191805735" duration="42083000" />
+      <workItem from="1559361751524" duration="10601000" />
     </task>
+    <task id="LOCAL-00001" summary="bro so basically were done">
+      <created>1559296052963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559296052964</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42598000" />
+    <option name="totallyTimeSpent" value="58083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -198,8 +201,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50033045" side_tool="true" visible="true" weight="0.32577905" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49966952" visible="true" weight="0.32577905" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50231326" side_tool="true" visible="true" weight="0.32577905" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4976867" visible="true" weight="0.32577905" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -231,20 +234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StatusBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -257,21 +246,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OnAndOff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="114" column="5" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="1921">
+          <caret line="114" column="5" selection-start-line="61" selection-start-column="8" selection-end-line="114" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveFile.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveFile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="128" column="89" selection-start-line="128" selection-start-column="89" selection-end-line="128" selection-end-column="89" />
+        <state relative-caret-position="-444">
+          <caret line="86" column="43" lean-forward="true" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#264#324#0" expanded="true" />
           </folding>
         </state>
       </provider>
