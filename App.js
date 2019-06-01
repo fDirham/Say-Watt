@@ -17,6 +17,7 @@ export default class App extends React.Component {
             holder: [ // To hold all light bulbs
                 {IP: '192.168.43.6', name: 'LIGHT BULB 1', stat: true, img: Images.lightOn},
             ],
+            after: true //After first swipe
 
         };
     }
@@ -26,11 +27,16 @@ export default class App extends React.Component {
             'LemonMilk': require('./assets/fonts/LemonMilk.otf'),
         });
 
+        try{
+            AsyncStorage.clear();
+        }catch(error){}
+
         await this.updateLights();
 
         this.setState({
             data: this.state.holder, fontLoaded: true
         });
+
 
         console.log(this.state);
         console.log('successfully loaded');
@@ -121,9 +127,12 @@ export default class App extends React.Component {
             return (
                 <Swiper loop={false}
                         showsPagination={false}
+                        scrollEnabled = {this.state.after}
                         onIndexChanged = {() => {
-
+                            this.setState({after : false})
                         }}
+                        yourNewPageIndex = {2}
+
                 >
                     <View style={styles.homeScreen1}>
                         <Image
@@ -268,6 +277,7 @@ export default class App extends React.Component {
                             ListHeaderComponent={this.renderHeader}
                         />
                     </View>
+
                 </Swiper>);
         }
 
