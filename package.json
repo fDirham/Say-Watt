@@ -19,7 +19,8 @@
     "react-native-filesystem": "^0.1.0",
     "react-native-fs": "^2.13.3",
     "react-native-swiper": "^1.5.14",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "tcomb-form-native": "^0.6.20"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",

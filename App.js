@@ -5,7 +5,52 @@ import {Font} from 'expo';
 import Images from './assets/images/index';
 import Swiper from 'react-native-swiper';
 import {AsyncStorage} from 'react-native';
+import t from 'tcomb-form-native';
 
+const Form = t.form.Form;
+
+const LightbulbStruc = t.struct({
+    IP: t.String,
+    name: t.String,
+    stat: false,
+    img: Images.lightOff,
+});
+
+const formStyles = {
+    ...Form.stylesheet,
+    formGroup: {
+        normal: {
+            marginBottom: 10
+        },
+    },
+    controlLabel: {
+        normal: {
+            color: 'blue',
+            fontSize: 18,
+            marginBottom: 7,
+            fontWeight: '600'
+        },
+        // the style applied when a validation error occours
+        error: {
+            color: 'red',
+            fontSize: 18,
+            marginBottom: 7,
+            fontWeight: '600'
+        }
+    }
+}
+
+const creation = {
+    fields: {
+        name: {
+            error: 'You need a name for the lightbulb.'
+        },
+        IP: {
+            error: 'Input the IP adress of the flipper.'
+        },
+    },
+    stylesheet: formStyles,
+};
 
 export default class App extends React.Component {
     constructor(props) {
@@ -54,9 +99,10 @@ export default class App extends React.Component {
         }
     }
 
-    addLight() {
-        this.setState({fontLoaded: this.fontLoaded, data: this.data, holder: this.holder.concat([{}])})
-    }
+    handleSubmit = () => {
+        const value = this._form.getValue();
+        console.log('value: ', value);
+    };
 
     renderSeparator = () => {
         return (
@@ -106,7 +152,7 @@ export default class App extends React.Component {
                 <TouchableOpacity
                     style={{backgroundColor: '#092276', alignItems: 'center'}}
                     onPress={() => {
-
+                        this.refs.swiper.scrollBy(1)
                     }
                     }>
                     <Text style={{fontSize: 20, color: '#FFF'}}>+ +</Text>
@@ -131,8 +177,7 @@ export default class App extends React.Component {
                         onIndexChanged = {() => {
                             this.setState({after : false})
                         }}
-                        yourNewPageIndex = {2}
-
+                        ref = 'swiper'
                 >
                     <View style={styles.homeScreen1}>
                         <Image
@@ -277,7 +322,17 @@ export default class App extends React.Component {
                             ListHeaderComponent={this.renderHeader}
                         />
                     </View>
-
+                    <View>
+                        <Form
+                            ref={c => this._form = c}
+                            type={User}
+                            options={options}
+                        />
+                        <Button
+                            title="Sign Up!"
+                            onPress={this.handleSubmit}
+                        />
+                    </View>
                 </Swiper>);
         }
 
