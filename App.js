@@ -509,12 +509,14 @@ export default class App extends React.Component {
                                                     {
                                                         text: 'Yes', onPress: async () => {
                                                             // Essentially finds the toggle in the JSON data
-                                                            const valueArray = JSON.parse(await AsyncStorage.getItem('ToggleData'));
+                                                            const valString = await AsyncStorage.getItem('ToggleData');
+                                                            const valueArray = JSON.parse(valString);
                                                             const index = valueArray.findIndex(e => e.name == item.name);
                                                             // Deletes the toggle from array
                                                             valueArray.splice(index, 1);
                                                             // Updates/refreshes the stored data and app
-                                                            await AsyncStorage.setItem('ToggleData', JSON.stringify(valueArray));
+                                                            const newValArray =  JSON.stringify(valueArray));
+                                                            await AsyncStorage.setItem('ToggleData', newValArray);
                                                             this.setState({holder: valueArray});
                                                             this.setState({data: valueArray});
                                                         }
@@ -528,14 +530,18 @@ export default class App extends React.Component {
                                             );
                                         }}
 
-                                        switch={{ // The switches that send fetch request
-                                            thumbColor: item.stat == false ? ourBlue : ourYellow, // Changes color of thumb depending on value
-                                            onValueChange: async value => { // Method cannot be separated due to needing item. values
+                                        switch={{ // The switches that send fetch request on the right
+                                                // Changes color of thumb depending on value
+                                            thumbColor: item.stat == false ? ourBlue : ourYellow,
+                                            onValueChange: async value => { // Method cannot be separated
+                                                // due to needing item.values
+
                                                 // Stores indexes of the value of toggle in both data and holder
                                                 var i = this.state.data.findIndex(e => e.name == item.name);
                                                 var j = this.state.holder.findIndex(e => e.name == item.name);
                                                 if (value) { // If switch is turned on
-                                                    this.state.data[i] = this.state.holder[j] = { // Change value in arrays
+                                                    // Change value in arrays
+                                                    this.state.data[i] = this.state.holder[j] = {
                                                         IP: item.IP,
                                                         name: item.name,
                                                         stat: value,
@@ -548,22 +554,26 @@ export default class App extends React.Component {
                                                     });
 
                                                     try { // Changes value in local data storage
-                                                        await AsyncStorage.setItem('ToggleData', JSON.stringify(this.state.holder));
+                                                        const valString = JSON.stringify(this.state.holder);
+                                                        await AsyncStorage.setItem('ToggleData', valString);
                                                     } catch (error) {
                                                         console.log(error)
                                                     }
 
                                                     // Send a fetch request to communicate with ISP
                                                     return fetch('http://' + item.IP, {
-                                                        method: 'GET', // Requesting data, mainly if we successfully reach the device or not
-                                                        headers: {
+                                                        method: 'GET', // Requesting data from ESP
+                                                        headers: {// If ESP does not receive these lines, it will not
+                                                                    //turn on
                                                             Accept: '/turn/on',
                                                         },
                                                     })
+                                                        // Converts text response to readable text
                                                         .then((response) => {
-                                                            return response.text(); // Converts text response to readable text
+                                                            return response.text();
                                                         })
-                                                        .then((responseText) => { // Can detect if light is already on or not
+                                                        // Can detect if light is already on or not
+                                                        .then((responseText) => {
                                                             const x = responseText;
                                                             console.log('TURNING ' + item.name);
                                                             console.log('RESPONSE:' + x);
@@ -578,7 +588,8 @@ export default class App extends React.Component {
                                                             console.log(error);
                                                             Alert.alert( // Sends alert to user
                                                                 'Connection failed!',
-                                                                'Failed to connect to ' + item.name + '. Please check batteries and connection.',
+                                                                'Failed to connect to ' +
+                                                                item.name + '. Please check batteries and connection.',
                                                                 [
                                                                     {text: 'Ok', onPress: () => console.log('Ok')},
                                                                 ],
@@ -597,7 +608,8 @@ export default class App extends React.Component {
                                                             });
 
                                                             try {
-                                                                await AsyncStorage.setItem('ToggleData', JSON.stringify(this.state.holder));
+                                                                const valString = JSON.stringify(this.state.holder);
+                                                                await AsyncStorage.setItem('ToggleData', );
                                                             } catch (error) {
                                                                 console.log(error)
                                                             }
@@ -616,7 +628,8 @@ export default class App extends React.Component {
                                                     });
 
                                                     try {
-                                                        await AsyncStorage.setItem('ToggleData', JSON.stringify(this.state.holder));
+                                                        const valArray = JSON.stringify(this.state.holder);
+                                                        await AsyncStorage.setItem('ToggleData', valArray);
                                                     } catch (error) {
                                                         console.log(error)
                                                     }
@@ -645,7 +658,8 @@ export default class App extends React.Component {
                                                             console.log(error);
                                                             Alert.alert(
                                                                 'Connection failed!',
-                                                                'Failed to connect to ' + item.name + '. Please check batteries and connection.',
+                                                                'Failed to connect to ' +
+                                                                item.name + '. Please check batteries and connection.',
                                                                 [
                                                                     {text: 'Ok', onPress: () => console.log('Ok')},
                                                                 ],
@@ -663,7 +677,8 @@ export default class App extends React.Component {
                                                             });
 
                                                             try {
-                                                                await AsyncStorage.setItem('ToggleData', JSON.stringify(this.state.holder));
+                                                                const valArray = JSON.stringify(this.state.holder);
+                                                                await AsyncStorage.setItem('ToggleData', valArray);
                                                             } catch (error) {
                                                                 console.log(error)
                                                             }

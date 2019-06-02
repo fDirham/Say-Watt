@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad4960a4-b363-469e-b028-a2cb5d28a856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/tut1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tut7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnAndOff.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="715" column="51" selection-start-line="715" selection-start-column="51" selection-end-line="715" selection-end-column="51" />
+            <state relative-caret-position="292">
+              <caret line="510" column="108" lean-forward="true" selection-start-line="510" selection-start-column="108" selection-end-line="510" selection-end-column="108" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -232,7 +218,7 @@
       <workItem from="1559191805735" duration="42083000" />
       <workItem from="1559361751524" duration="28219000" />
       <workItem from="1559421781402" duration="30755000" />
-      <workItem from="1559456619670" duration="1652000" />
+      <workItem from="1559456619670" duration="2940000" />
     </task>
     <task id="LOCAL-00001" summary="bro so basically were done">
       <created>1559296052963</created>
@@ -245,7 +231,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108108000" />
+    <option name="totallyTimeSpent" value="109396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -349,8 +335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="715" column="51" selection-start-line="715" selection-start-column="51" selection-end-line="715" selection-end-column="51" />
+        <state relative-caret-position="292">
+          <caret line="510" column="108" lean-forward="true" selection-start-line="510" selection-start-column="108" selection-end-line="510" selection-end-column="108" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
