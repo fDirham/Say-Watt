@@ -421,7 +421,7 @@ export default class App extends React.Component {
                                 <Text style={styles.tutorialText1}>STEP 4</Text>
                             </View>
                             <Text style={styles.tutorialText2}>Use the add button to register your SayWatt Toggle
-                                Device, creating a toggle device.</Text>
+                                Device, creating a toggle object.</Text>
                         </View>
 
                         <View style={styles.tutorialScreens}>
@@ -461,7 +461,7 @@ export default class App extends React.Component {
                                     style={{width: height / 3, height: height / 3}}
                                     source={Images.tut7}
                                 />
-                                <Text style={styles.tutorialText1}>Enjoy :) -FYD</Text>
+                                <Text style={styles.tutorialText1}>Enjoy :) -F.Y.D</Text>
                             </View>
                             <Switch
                                 onValueChange={async () => {
