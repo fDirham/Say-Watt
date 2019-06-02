@@ -13,6 +13,8 @@ only runnable through expo for the time being. It contains 3 main sections, a la
 app section. A list displays all the toggle devices connected to the app, where the data is stored locally, and users can add, delete, and
 search for objects throughout the list.
 
+Code for ESP8266 is also included which allows it to communicate with the app and move servo motors.
+
 SayWatt is the project created by Team 12 for IEEE Spring Quarterly Projects 2019. The team is made up of Fajar Dirham, Yifan Li, 
 and Dominick Lee. The code here was written in react and contains most of the files necessary to run the project through expo 
 (.expo is not included). 
