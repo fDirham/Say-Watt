@@ -315,7 +315,7 @@ export default class App extends React.Component {
                     await AsyncStorage.setItem('ToggleData', JSON.stringify(newValArray));
                     this.setState({holder: newValArray, data: newValArray});
                 } else {
-                    await AsyncStorage.setItem('ToggleData', JSON.stringify([togglePrototype]);
+                    await AsyncStorage.setItem('ToggleData', JSON.stringify([togglePrototype]));
                     this.setState({holder: [togglePrototype], data: [togglePrototype]});
                 }
             } catch (error) {
