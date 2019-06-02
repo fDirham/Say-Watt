@@ -299,28 +299,29 @@ export default class App extends React.Component {
 
     // Form methods
     handleSubmit = async () => { // Runs when the submit button in the form is pushed
-        const value = this._form.getValue();
+        const value = this._form.getValue(); // Takes values from the struct created by submitting form
         if (value != null) {
-            var togglePrototype = {
+            var togglePrototype = { // Creates the object that will get added
                 IP: value.IP,
                 name: value.name,
                 stat: false,
                 img: Images.lightOff
             };
-            try {
+            try {// Standard taking out saved data, checking if null, and saving and refreshing the state
                 const value = await AsyncStorage.getItem('ToggleData');
-                const valueArray = JSON.parse(value);
-                console.log(valueArray);
-                console.log(togglePrototype);
-                const newValArray = [...valueArray, togglePrototype];
-                if (value !== null) {
+                if (value != null) {
+                    const valueArray = JSON.parse(value);
+                    const newValArray = [...valueArray, togglePrototype];
                     await AsyncStorage.setItem('ToggleData', JSON.stringify(newValArray));
                     this.setState({holder: newValArray, data: newValArray});
+                } else {
+                    await AsyncStorage.setItem('ToggleData', JSON.stringify([togglePrototype]);
+                    this.setState({holder: [togglePrototype], data: [togglePrototype]});
                 }
             } catch (error) {
                 console.log(error);
             }
-            this.refs.swiper.scrollBy(-1);
+            this.refs.swiper.scrollBy(-1); //Scrolls back to first page
         }
     };
     handleCancel = async () => { // Runs when cancel is pressed, could put inside but neater this way
@@ -434,7 +435,8 @@ export default class App extends React.Component {
                                 <Text style={styles.tutorialText1}>STEP 5</Text>
                             </View>
                             <Text style={styles.tutorialText2}>Use the switches on the toggle object's right to turn
-                                device on and off.</Text>
+                                device on and off. Make sure you are connected to the same WiFi as your Toggle
+                                Device.</Text>
                         </View>
 
                         <View style={styles.tutorialScreens}>
@@ -515,7 +517,7 @@ export default class App extends React.Component {
                                                             // Deletes the toggle from array
                                                             valueArray.splice(index, 1);
                                                             // Updates/refreshes the stored data and app
-                                                            const newValArray =  JSON.stringify(valueArray));
+                                                            const newValArray = JSON.stringify(valueArray);
                                                             await AsyncStorage.setItem('ToggleData', newValArray);
                                                             this.setState({holder: valueArray});
                                                             this.setState({data: valueArray});
@@ -531,10 +533,10 @@ export default class App extends React.Component {
                                         }}
 
                                         switch={{ // The switches that send fetch request on the right
-                                                // Changes color of thumb depending on value
+                                            // Changes color of thumb depending on value
                                             thumbColor: item.stat == false ? ourBlue : ourYellow,
                                             onValueChange: async value => { // Method cannot be separated
-                                                // due to needing item.values
+                                                                            // due to needing item.values
 
                                                 // Stores indexes of the value of toggle in both data and holder
                                                 var i = this.state.data.findIndex(e => e.name == item.name);
@@ -564,11 +566,11 @@ export default class App extends React.Component {
                                                     return fetch('http://' + item.IP, {
                                                         method: 'GET', // Requesting data from ESP
                                                         headers: {// If ESP does not receive these lines, it will not
-                                                                    //turn on
+                                                            //turn on
                                                             Accept: '/turn/on',
                                                         },
                                                     })
-                                                        // Converts text response to readable text
+                                                    // Converts text response to readable text
                                                         .then((response) => {
                                                             return response.text();
                                                         })
@@ -609,7 +611,7 @@ export default class App extends React.Component {
 
                                                             try {
                                                                 const valString = JSON.stringify(this.state.holder);
-                                                                await AsyncStorage.setItem('ToggleData', );
+                                                                await AsyncStorage.setItem('ToggleData',);
                                                             } catch (error) {
                                                                 console.log(error)
                                                             }
