@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tabalicious2",
-    "slug": "tab2",
+    "name": "SayWatt",
+    "slug": "swapp",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
